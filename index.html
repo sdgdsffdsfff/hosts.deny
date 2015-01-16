@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Hosts.deny by mruse</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Hosts.deny</h1>
+        <p>收集的恶意IP: host.deny</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/mruse/hosts.deny" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/mruse/hosts.deny/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/mruse/hosts.deny/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a id="恶意ip黑名单-hostdeny" class="anchor" href="#%E6%81%B6%E6%84%8Fip%E9%BB%91%E5%90%8D%E5%8D%95-hostdeny" aria-hidden="true"><span class="octicon octicon-link"></span></a>恶意IP黑名单: host.deny</h1>
+
+<blockquote>
+<p>出现以下情况，加入黑名单</p>
+</blockquote>
+
+<ol>
+<li>在不可能地区IP频繁尝试登陆服务器或有对服务器进行恶意扫描行为；</li>
+<li>对网站尝试恶意SQL注入或其他渗透；</li>
+<li>入侵网站或者服务器进行破坏行为；</li>
+</ol>
+
+<blockquote>
+<p>使用</p>
+</blockquote>
+
+<pre><code># 下载，解压， 执行
+wget https://github.com/mruse/hosts.deny/archive/master.zip
+unzip master.zip
+cd hosts.deny-master
+bash -x hosts.deny
+
+# Nginx配置文件中 加入 deny.sh 中 WEB_DENY 配置路径，如：
+server
+{
+    ...
+    include vhosts/acces-deny.inc;
+    ...
+}
+# 重启Nginx，或重载Nginx配置文件
+/etc/init.d/nginx {restart|reload}
+</code></pre>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/mruse">mruse</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
