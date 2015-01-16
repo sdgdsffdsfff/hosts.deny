@@ -8,6 +8,7 @@
 0. 入侵王占或者服务器进行破坏行为；
 
 > 使用
+
   # 下载，解压， 执行
   wget https://github.com/mruse/hosts.deny/archive/master.zip
   unzip master.zip
