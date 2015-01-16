@@ -9,9 +9,9 @@
 
 > 使用
 
-  # 下载，解压， 执行
-  wget https://github.com/mruse/hosts.deny/archive/master.zip
-  unzip master.zip
-  cd hosts.deny-master
-  bash -x hosts.deny
+    # 下载，解压， 执行
+    wget https://github.com/mruse/hosts.deny/archive/master.zip
+    unzip master.zip
+    cd hosts.deny-master
+    bash -x hosts.deny
   
