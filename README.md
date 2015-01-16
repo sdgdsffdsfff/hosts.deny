@@ -13,4 +13,13 @@
     unzip master.zip
     cd hosts.deny-master
     bash -x hosts.deny
-  
+    
+    # Nginx配置文件中 加入 deny.sh 中 WEB_DENY 配置路径，如：
+    server
+    {
+        ...
+        include vhosts/acces-deny.inc;
+        ...
+    }
+    # 重启Nginx，或重载Nginx配置文件
+    /etc/init.d/nginx {restart|reload}
