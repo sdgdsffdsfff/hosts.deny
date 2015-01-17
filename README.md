@@ -1,4 +1,4 @@
-# 恶意IP黑名单: host.deny
+# 恶意IP黑名单: hosts.deny
 
 > 出现以下情况，加入黑名单
 
